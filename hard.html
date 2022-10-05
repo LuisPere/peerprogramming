@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let matchParanthesis = (input) => {
+        let braces = "{}[]()";
+        let stack = [];
+        for (let braket of input) {
+          let braketsIndex = braces.indexOf(braket);
+
+          if (braketsIndex % 2 === 0) {
+            stack.push(braketsIndex + 1);
+          } else {
+            if (stack.pop() !== braketsIndex) {
+              return false;
+            }
+          }
+        }
+        return stack.length === 0;
+      };
+
+      console.log(matchParanthesis("([])[{}]{(())}"));
+      console.log(matchParanthesis("([])[{}]{(([))}"));
+    </script>
+  </body>
+</html>

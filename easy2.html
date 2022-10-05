@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // EXAMPLE 1!!
+      //arr will store all numbers bith prime and not prime
+      const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //creating a function to find the prime #'s
+      //then passing them into a new array
+      function findPrime(numArray) {
+        var primeArray = []; // will store all prime #'s
+        var count = 0; //counter for prime #'s
+        //creating a loop over the arr array
+        for (let i = 0; i < numArray.length; i++) {
+          var err = 0;
+          //loop to catch all prime #'s
+          for (var p = 2; p >= numArray[i] / 2; p++) {
+            if (numArray[i] % p === 0) {
+              err = 1;
+              break;
+            }
+          }
+          //if the number in the array is divisible then the number is prime
+          if (err === 0) {
+            primeArray[count++] = numArray[i]; //the prime #'s will be stored here
+          }
+        }
+        //console logging prime[]
+        console.log(`Output: ${primeArray}`);
+      }
+      console.log(`Input: ${numArray}`);
+      findPrime(numArray);
+
+      //------------------------------------------------------------------------------------------//
+      //EXAMPLE 2!!
+      //arr will store all numbers bith prime and not prime
+      const numArray2 = [10, 18, 19, 29, 33, 35, 47, 66, 83];
+      //creating a function to find the prime #'s
+      //then passing them into a new array
+      function findPrime(numArray2) {
+        var primeArray = []; // will store all prime #'s
+        var count = 0; //counter for prime #'s
+        //creating a loop over the arr array
+        for (let i = 0; i < numArray2.length; i++) {
+          var err = 0;
+          //loop to catch all prime #'s
+          for (var p = 2; p <= numArray2[i] / 2; p++) {
+            if (numArray2[i] % p === 0) {
+              err = 1;
+              break;
+            }
+          }
+          //if the number in the array is divisible then the number is prime
+          if (err === 0) {
+            primeArray[count++] = numArray2[i]; //the prime #'s will be stored here
+          }
+        }
+        //console logging prime[]
+        console.log(`Output: ${primeArray}`);
+      }
+      console.log(`Input: ${numArray2}`);
+      findPrime(numArray2);
+    </script>
+  </body>
+</html>

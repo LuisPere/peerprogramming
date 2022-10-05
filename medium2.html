@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function anagram(str1, str2) {
+        if (str1.length !== str2.length) {
+          return false;
+        }
+        let str1ng1 = str1.toLowerCase().split("").sort().join("");
+        let str1ng2 = str2.toLowerCase().split("").sort().join("");
+        return str1ng1 === str1ng2;
+      }
+      console.log(anagram("apples and bananas", "slepap nas dnaabna"));
+      console.log(anagram("Things are good", "Dogs eat ants"));
+    </script>
+  </body>
+</html>

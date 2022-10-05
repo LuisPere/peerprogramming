@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function vowelChecker(x) {
+        var firstChar = x.toLowerCase();
+        if (
+          firstChar === "a" ||
+          firstChar === "e" ||
+          firstChar === "i" ||
+          firstChar === "o" ||
+          firstChar === "u"
+        ) {
+          console.log("confirmed vowel");
+        } else {
+          console.log("WRONG");
+        }
+      }
+
+      vowelChecker("a");
+      vowelChecker("g");
+    </script>
+  </body>
+</html>

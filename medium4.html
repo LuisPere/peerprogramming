@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Create object as myCar
+      let myCar = {
+        make: "Hyundai",
+        model: "Sonata",
+        year: 2011,
+        mileage: 2000,
+        color: "Black",
+        // creating driveToWork method
+        driveToWork: function (x) {
+          // setting new milage to 2033 miles
+          newMileage = this.mileage + x;
+          console.log(
+            `           Drive to Work\n---------------------------------------`
+          );
+          console.log(
+            `Old Mileage: ${myCar.mileage} | New Milage : ${newMileage}\n`
+          );
+          console.log(`Explanation: ${myCar.mileage} + ${x} = ${newMileage}\n`);
+        },
+        // creating driveAroundTheWorld method
+        driveAroundTheWorld: function (y) {
+          //adding more milage to become 26033 miles
+          moreMileage = newMileage + y;
+          console.log(
+            `       Drive Around the World\n---------------------------------------`
+          );
+          console.log(
+            `Old Mileage: ${newMileage} | New Mileage: ${moreMileage}\n`
+          );
+        },
+        // creating runErrands method
+        runErrands: function (z) {
+          //addind up all of the miles on the car
+          allMiles = moreMileage + z;
+          console.log(
+            `            Run Errands\n---------------------------------------`
+          );
+          console.log(
+            `Old milage : ${moreMileage} | New Mileage: ${allMiles}\n`
+          );
+        },
+      };
+      // calling methods
+      myCar.driveToWork(33);
+      myCar.driveAroundTheWorld(24000);
+      myCar.runErrands(30);
+    </script>
+  </body>
+</html>
